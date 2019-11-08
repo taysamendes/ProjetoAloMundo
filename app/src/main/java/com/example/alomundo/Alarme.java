@@ -14,7 +14,7 @@ public class Alarme extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         mp = MediaPlayer.create(context,R.raw.musica);
         mp.start();
-        Toast.makeText(context, "Recebido", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Reproduzindo", Toast.LENGTH_SHORT).show();
 
     }
 }

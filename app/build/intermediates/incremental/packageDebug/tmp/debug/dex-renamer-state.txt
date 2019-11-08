@@ -1,4 +1,4 @@
-#Wed Nov 06 12:41:39 BRT 2019
-base.0=/home/dspace/AndroidStudioProjects/AloMundo/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Fri Nov 08 09:23:26 BRT 2019
+base.0=/home/taysa/Documentos/TSI/PDM/AloMundo/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

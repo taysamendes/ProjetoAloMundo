@@ -24,26 +24,20 @@ class MainActivity : AppCompatActivity() {
         this.btMain = findViewById(R.id.btMain)
         this.etMain = findViewById(R.id.etMain)
 
-        this.btMain.setOnClickListener({clickButton(it)})
+        this.btMain.setOnClickListener({clickButton()})
 
 
     }
 
-    fun clickButton(view : View){
-        acionarAlarme();
-    }
-
-    fun acionarAlarme() {
+    fun clickButton() {
         var time = this@MainActivity.etMain.text.toString().toInt()
-        var it =  Intent(this,Alarme::class.java)
-        var pe: PendingIntent = PendingIntent.getBroadcast(applicationContext,0,it,0)
+        var it = Intent(this, Alarme::class.java)
+        var pe: PendingIntent = PendingIntent.getBroadcast(applicationContext, 0, it, 0)
 
-        var am:AlarmManager = this.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        am.set(AlarmManager.RTC_WAKEUP,System.currentTimeMillis()+time*1000,pe);
-        Toast.makeText(this,"Alarme ativado" + time+" segundos",Toast.LENGTH_SHORT)
+        var am: AlarmManager = this.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        am.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + time * 1000, pe)
+        Toast.makeText(this,"Alarme ativado para" + time+" segundos",Toast.LENGTH_SHORT).show()
 
     }
-
-
 
 }
